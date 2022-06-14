@@ -5,11 +5,11 @@ import javax.persistence.*;
 @Entity
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
     String name;
     Long price;
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name="category_id")
     Category category;
 

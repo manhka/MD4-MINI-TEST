@@ -17,6 +17,7 @@ public class CategoryServiceIMPL implements ICategoryService{
 
     @Override
     public Iterable<Category> findByName(String name) {
+
         return categoryRepository.findAllByNameContaining(name);
     }
 

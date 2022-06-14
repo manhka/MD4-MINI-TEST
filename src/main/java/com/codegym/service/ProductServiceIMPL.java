@@ -23,6 +23,16 @@ public class ProductServiceIMPL implements IProductService{
     }
 
     @Override
+    public Iterable<Product> findAllByOrderByPrice() {
+        return productRepository.findAllByOrderByPrice();
+    }
+
+    @Override
+    public Iterable<Product> getTop4() {
+        return productRepository.getTop4();
+    }
+
+    @Override
     public Optional<Product> findById(Long id) {
         return productRepository.findById(id);
     }
